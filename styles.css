@@ -1,0 +1,143 @@
+:root{
+  --bg:#0f1720;
+  --card:#0b1320;
+  --accent:#0ea5a4;
+  --muted:#94a3b8;
+  --glass: rgba(255,255,255,0.03);
+  --white:#ffffff;
+  --max-width:1100px;
+  --radius:12px;
+  --gap:20px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--white);
+  background: linear-gradient(180deg,#031021 0%, #071126 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  padding-bottom:60px;
+  scroll-behavior: smooth; /* fallback smooth */
+}
+
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding: 28px;
+}
+
+/* Header */
+.site-header{
+  position:sticky;
+  top:0;
+  background: rgba(2,6,23,0.75);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  z-index:50;
+}
+.header-inner{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:space-between;
+}
+.branding{display:flex; gap:10px; align-items:center}
+#siteSymbol{width:36px; height:36px; object-fit:cover; border-radius:8px}
+.logo{
+  font-weight:800;
+  font-size:20px;
+  text-decoration:none;
+  color:var(--white);
+}
+
+.nav{display:flex; gap:14px; align-items:center}
+.nav a{color:var(--muted); text-decoration:none; font-weight:600; padding:8px 10px; border-radius:8px}
+.nav a:hover{color:var(--white); background:var(--glass)}
+.btn-outline{border:1px solid rgba(255,255,255,0.08); padding:8px 12px; border-radius:8px; text-decoration:none; color:var(--white)}
+
+.nav-toggle{display:none;background:transparent;border:0;color:var(--white);font-size:20px; padding:8px}
+
+/* Hero */
+.hero{padding:48px 0}
+.hero-inner{display:flex; gap:32px; align-items:center; justify-content:space-between}
+.hero-content{flex:1}
+.hero h1{font-size:36px;margin:0 0 8px}
+.accent{color:var(--accent)}
+.lead{color:var(--muted); margin-bottom:14px}
+.bio{color:rgba(255,255,255,0.85); max-width:640px}
+.hero-actions{display:flex; gap:12px; margin-top:18px}
+.btn-primary{background:var(--accent); color:#042024; padding:10px 16px; border-radius:10px; text-decoration:none; font-weight:700; border:0}
+.btn-ghost{background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--white); padding:10px 16px; border-radius:10px; text-decoration:none}
+.hero-card img{width:300px; border-radius:12px; display:block; box-shadow: 0 10px 30px rgba(2,6,23,0.6)}
+
+/* Sections */
+.section{padding:40px 0}
+.section.alt{background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+.section-title{font-size:20px; margin:0 0 16px; color:var(--white); font-weight:700}
+
+/* About grid */
+.grid{display:grid; gap:20px}
+.about-grid{grid-template-columns: 1fr 320px}
+.small-cards{display:flex; flex-direction:column; gap:12px}
+.card{background:rgba(255,255,255,0.02); padding:16px; border-radius:12px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.01)}
+
+/* Projects */
+.project-list{display:grid; gap:14px}
+.project{background:rgba(255,255,255,0.02); padding:18px; border-radius:12px}
+.project-meta{font-weight:700; color:var(--muted); font-size:13px}
+.project h3{margin:6px 0}
+.btn-link{display:inline-block;margin-top:8px;color:var(--accent); text-decoration:none; font-weight:700}
+
+/* Timeline */
+.timeline{display:flex; flex-direction:column; gap:14px}
+.timeline-item{display:flex; gap:14px; align-items:flex-start}
+.timeline-date{width:120px; font-weight:700; color:var(--muted)}
+.timeline-content{background:rgba(255,255,255,0.01); padding:12px 16px; border-radius:10px; flex:1}
+
+/* Certificates */
+.cert-grid{display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:14px}
+.cert-card{display:flex; gap:12px; background:rgba(255,255,255,0.02); padding:12px; border-radius:12px; align-items:center; cursor:default}
+.cert-card img{width:120px; height:80px; object-fit:cover; border-radius:8px}
+.cert-clickable{cursor:pointer; transition:transform .12s ease}
+.cert-clickable:focus, .cert-clickable:hover{transform:translateY(-6px); box-shadow:0 10px 30px rgba(0,0,0,0.4)}
+
+/* Contact area - boxed layout */
+.contact-grid{grid-template-columns: 1fr 1fr; display:grid; gap:20px}
+.contact-boxes{display:flex; flex-direction:column; gap:14px}
+.contact-box{background:rgba(255,255,255,0.02); padding:16px; border-radius:12px; border:1px solid rgba(255,255,255,0.03)}
+.contact-box h3{margin:0 0 8px}
+.contact-form{background:rgba(255,255,255,0.02); padding:16px; border-radius:12px}
+.contact-form label{display:block; margin-bottom:8px; font-weight:600; color:var(--muted)}
+.contact-form input, .contact-form textarea{
+  width:100%; padding:10px; margin-top:6px; border-radius:8px;
+  border:1px solid rgba(255,255,255,0.04); background:transparent; color:var(--white)
+}
+.form-actions{display:flex; gap:8px; margin-top:10px}
+.form-status{margin-top:8px; color:var(--accent)}
+
+/* Modal for certificates - centered and smaller than full size */
+.cert-modal{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(2,6,23,0.6); z-index:2000}
+.cert-modal[aria-hidden="false"]{display:flex}
+.cert-modal-inner{background:var(--card); border-radius:12px; padding:18px; max-width:80%; max-height:80%; box-shadow: 0 20px 60px rgba(0,0,0,0.7); position:relative; display:flex; align-items:center; justify-content:center}
+.cert-body{max-width:100%; max-height:100%; overflow:auto; display:flex; align-items:center; justify-content:center}
+.cert-body img{max-width:90vw; max-height:70vh; border-radius:6px}
+.cert-close{position:absolute; top:10px; right:10px; background:transparent; border:0; color:var(--muted); font-size:20px; cursor:pointer}
+
+/* Footer */
+.site-footer{margin-top:40px; padding:16px 0; border-top: 1px solid rgba(255,255,255,0.03)}
+.footer-inner{display:flex; align-items:center; justify-content:space-between; gap:12px; color:var(--muted)}
+.small{font-size:13px}
+
+/* Responsive */
+@media (max-width:1000px){
+  .about-grid{grid-template-columns:1fr}
+  .hero-inner{flex-direction:column-reverse}
+  .hero-card img{width:260px}
+  .contact-grid{grid-template-columns:1fr}
+  .nav{display:none}
+  .nav-toggle{display:block}
+}
