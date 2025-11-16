@@ -222,29 +222,27 @@
           </div>
         </div>
 
-        <form id="contactForm" class="contact-form" onsubmit="return false;">
-          <label>
-            Name
-            <input type="text" id="name" required placeholder="Your name" />
-          </label>
+        <form action="https://formspree.io/f/xldapbyy" method="POST" class="contact-form">
+  
+   <label>
+    Name
+    <input type="text" name="name" required placeholder="Your name" />
+  </label>
 
-          <label>
-            Email
-            <input type="email" id="email" required placeholder="you@example.com" />
-          </label>
+  <label>
+    Email
+    <input type="email" name="email" required placeholder="you@example.com" />
+  </label>
 
-          <label>
-            Message
-            <textarea id="message" rows="6" required placeholder="Hi Vishwaa, ..."></textarea>
-          </label>
+  <label>
+    Message
+    <textarea name="message" rows="5" required placeholder="Write your message..."></textarea>
+  </label>
 
-          <div class="form-actions">
-            <button type="button" class="btn-primary" id="sendBtn">Send Message</button>
-            <button type="button" class="btn-ghost" id="clearBtn">Clear</button>
-          </div>
+  <button type="submit" class="btn-primary">Send Message</button>
 
-          <p id="formStatus" class="form-status"></p>
-        </form>
+</form>
+
       </div>
     </div>
   </section>
@@ -269,4 +267,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
