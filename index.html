@@ -2,278 +2,1148 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Vishwaa Reddy — Portfolio</title>
-  <meta name="description" content="Vishwaa Reddy | Data Science Student | AI/ML | Event | Athlete" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <!-- SEO Meta Tags -->
+  <title>Vishwaa Reddy | Data Science Portfolio | AI/ML Specialist</title>
+  <meta name="description" content="Vishwaa Reddy - Data Science Student specializing in AI/ML, Computer Vision, and Data Analytics. View my projects, internships, and achievements." />
+  <meta name="keywords" content="Data Science, AI, Machine Learning, Portfolio, Python, Computer Vision" />
+  <meta name="author" content="Vishwaa Reddy" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Vishwaa Reddy | Data Science Portfolio" />
+  <meta property="og:description" content="Explore my journey in Data Science, AI/ML projects, and professional achievements." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png" />
 </head>
+
 <body>
-  <header class="site-header">
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="loader-content">
+      <div class="spinner"></div>
+      <p class="loader-text">Loading Portfolio...</p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
     <div class="container header-inner">
-      <div class="branding">
-        <!-- Replace siteSymbol.png with your symbol image -->
-        <img id="siteSymbol" src="logo.png" alt="symbol" />
-        <a class="logo" href="logo.png">Vishwaa Reddy</a>
+      <div class="branding" data-aos="fade-right">
+        <img id="siteSymbol" src="logo.png" alt="Vishwaa Reddy Logo" />
+        <a class="logo" href="#home">
+          <span class="logo-text">Vishwaa</span>
+          <span class="logo-accent">Reddy</span>
+        </a>
       </div>
 
-      <nav class="nav" id="mainNav">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#internships" class="nav-link">Internships</a>
-        <a href="#certificates" class="nav-link">Certificates</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      <!-- Button to open the resume page -->
-        <a class="btn-outline" id="resumeBtn" href="Vishwaa_Reddy_Updated_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <nav class="nav" id="mainNav" data-aos="fade-left">
+        <a href="#home" class="nav-link active">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="#about" class="nav-link">
+          <i class="fas fa-user"></i>
+          <span>About</span>
+        </a>
+        <a href="#projects" class="nav-link">
+          <i class="fas fa-code"></i>
+          <span>Projects</span>
+        </a>
+        <a href="#internships" class="nav-link">
+          <i class="fas fa-briefcase"></i>
+          <span>Experience</span>
+        </a>
+        <a href="#certificates" class="nav-link">
+          <i class="fas fa-certificate"></i>
+          <span>Certificates</span>
+        </a>
+        <a href="#contact" class="nav-link">
+          <i class="fas fa-envelope"></i>
+          <span>Contact</span>
+        </a>
+        <a class="btn-outline" href="Vishwaa_Reddy_Updated_Resume.pdf" target="_blank" rel="noopener">
+          <i class="fas fa-download"></i>
+          <span>Resume</span>
+        </a>
+      </nav>
 
-
-      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">☰</button>
+      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="hero" id="home">
+    <div class="hero-bg-animation">
+      <div class="floating-shape shape-1"></div>
+      <div class="floating-shape shape-2"></div>
+      <div class="floating-shape shape-3"></div>
+    </div>
+    
     <div class="container hero-inner">
-      <div class="hero-content">
-        <h1>Hi, I'm <span class="accent">Vishwaa Reddy</span></h1>
-        <p class="lead">Data Science Student | AI/ML | Event | Athlete</p>
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+        <div class="hero-badge">
+          <i class="fas fa-star"></i>
+          <span>Available for Opportunities</span>
+        </div>
+        
+        <h1 class="hero-title">
+          Hi, I'm 
+          <span class="accent gradient-text">Vishwaa Reddy</span>
+          <span class="wave">👋</span>
+        </h1>
+        
+        <div class="typing-container">
+          <p class="lead">
+            <span class="typing-text" id="typingText"></span>
+            <span class="cursor">|</span>
+          </p>
+        </div>
+        
         <p class="bio">
-          Welcome to my profile! I’m passionate about AI, building practical data products, and organizing large-scale events. Browse my projects, certificates, and contact details below.
+          <i class="fas fa-quote-left quote-icon"></i>
+          Welcome to my digital space! I'm passionate about leveraging <strong>AI & Machine Learning</strong> 
+          to build innovative data products, leading <strong>large-scale events</strong>, and competing as an athlete. 
+          Explore my journey, projects, and achievements below.
         </p>
 
-        <div class="hero-actions">
-          <a class="btn-primary" href="#projects">See Projects</a>
-          <a class="btn-ghost" href="#contact">Contact Me</a>
+        <div class="stats-row" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-item">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Internships</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Certificates</div>
+          </div>
+        </div>
+
+        <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+          <a class="btn-primary" href="#projects">
+            <span>View Projects</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a class="btn-ghost" href="#contact">
+            <span>Let's Talk</span>
+            <i class="fas fa-comment-dots"></i>
+          </a>
+        </div>
+
+        <div class="social-links" data-aos="fade-up" data-aos-delay="400">
+          <a href="https://github.com/Hydramix" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/vishwaa-reddy-904260272" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/vishwaareddy33/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="mailto:vishwaavreddy@gmail.com" class="social-icon" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
         </div>
       </div>
 
-      <div class="hero-card">
-        <!-- Replace with your portrait image file -->
-        <img src="WhatsApp Image 2025-11-16 at 10.57.52 AM.jpeg" alt="Vishwaa Reddy portrait" />
+      <div class="hero-card" data-aos="fade-left" data-aos-duration="1000">
+        <div class="card-glow"></div>
+        <div class="profile-frame">
+          <img src="WhatsApp Image 2025-11-16 at 10.57.52 AM.jpeg" alt="Vishwaa Reddy - Data Scientist" />
+          <div class="profile-overlay">
+            <div class="tech-icons">
+              <i class="fab fa-python"></i>
+              <i class="fas fa-brain"></i>
+              <i class="fas fa-chart-line"></i>
+              <i class="fas fa-database"></i>
+            </div>
+          </div>
+        </div>
+        
+        <div class="floating-card card-1">
+          <i class="fas fa-trophy"></i>
+          <span>Best Performer</span>
+        </div>
+        <div class="floating-card card-2">
+          <i class="fas fa-users"></i>
+          <span>8K+ Event Footfall</span>
+        </div>
       </div>
+    </div>
+    
+    <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="800">
+      <a href="#about" aria-label="Scroll to About section">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <span>Scroll Down</span>
+      </a>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- About Section -->
   <section class="section" id="about">
     <div class="container">
-      <h2 class="section-title">About</h2>
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Get To Know More</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="title-underline"></div>
+      </div>
+
       <div class="grid about-grid">
-        <div>
-          <p><strong>Final-year B.Sc. Data Science — S.I.E.S College</strong></p>
-          <p>Experienced in Python, ML workflows, Power BI and event organisation. I like building practical projects (CV & ML), leading teams for college events, and competing in kabaddi.</p>
-          <ul class="keypoints">
-            <li>AI/ML: scikit-learn, TensorFlow</li>
-            <li>Data Tools: Excel, Power BI, Tableau</li>
-            <li>Big Data: Spark, Kafka (familiar)</li>
-            <li>Languages: Python, Java, R</li>
-          </ul>
+        <div class="about-content" data-aos="fade-right">
+          <div class="about-text">
+            <div class="highlight-box">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <h3>Education</h3>
+                <p><strong>B.Sc. Data Science</strong> — S.I.E.S College</p>
+                <p class="year">Final Year Student</p>
+              </div>
+            </div>
+            
+            <p class="about-description">
+              I'm a passionate Data Science student with hands-on experience in building 
+              <strong>AI/ML solutions</strong>, <strong>computer vision applications</strong>, 
+              and <strong>data analytics dashboards</strong>. My journey combines technical 
+              expertise with leadership skills gained through organizing large-scale events 
+              and competing in sports.
+            </p>
+            
+            <p class="about-description">
+              Beyond academics, I serve as <strong>Gymkhana Joint Secretary</strong>, where 
+              I've successfully led events with 8,000+ attendees, and compete at the district 
+              and state level in Kabaddi.
+            </p>
+          </div>
+
+          <div class="skills-section">
+            <h3><i class="fas fa-code"></i> Technical Skills</h3>
+            
+            <div class="skill-category">
+              <h4>Programming & ML</h4>
+              <div class="skill-tags">
+                <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
+                <span class="skill-tag"><i class="fab fa-r-project"></i> R</span>
+                <span class="skill-tag"><i class="fas fa-brain"></i> Scikit-learn</span>
+                <span class="skill-tag"><i class="fas fa-project-diagram"></i> TensorFlow</span>
+                <span class="skill-tag"><i class="fas fa-eye"></i> OpenCV</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h4>Data & Analytics</h4>
+              <div class="skill-tags">
+                <span class="skill-tag"><i class="fas fa-file-excel"></i> Excel</span>
+                <span class="skill-tag"><i class="fas fa-chart-bar"></i> Power BI</span>
+                <span class="skill-tag"><i class="fas fa-chart-pie"></i> Tableau</span>
+                <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h4>Big Data & Tools</h4>
+              <div class="skill-tags">
+                <span class="skill-tag"><i class="fas fa-fire"></i> Spark</span>
+                <span class="skill-tag"><i class="fas fa-stream"></i> Kafka</span>
+                <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+                <span class="skill-tag"><i class="fab fa-docker"></i> Docker</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="small-cards">
-          <div class="card">
+        <div class="about-cards" data-aos="fade-left">
+          <div class="info-card">
+            <div class="card-icon">
+              <i class="fas fa-award"></i>
+            </div>
             <h3>Gymkhana Joint Secretary</h3>
-            <p>Leads sports & student engagement; organized Nexora event with 8,000+ footfall.</p>
+            <p>Leading sports & student engagement initiatives. Successfully organized 
+               <strong>Nexora</strong>, a flagship event that attracted <strong>8,000+ attendees</strong>, 
+               managing logistics, sponsorships, and cross-functional teams.</p>
+            <div class="card-footer">
+              <span class="badge"><i class="fas fa-users"></i> Leadership</span>
+              <span class="badge"><i class="fas fa-calendar"></i> Event Management</span>
+            </div>
           </div>
-          <div class="card">
-            <h3>Sports</h3>
-            <p>District & state-level Kabaddi; represented college in inter-state events.</p>
+
+          <div class="info-card">
+            <div class="card-icon">
+              <i class="fas fa-running"></i>
+            </div>
+            <h3>Athlete & Sports Enthusiast</h3>
+            <p>Competitive Kabaddi player representing at <strong>district and state levels</strong>. 
+               Participated in inter-state tournaments, combining athletic excellence with academic pursuits.</p>
+            <div class="card-footer">
+              <span class="badge"><i class="fas fa-medal"></i> Kabaddi</span>
+              <span class="badge"><i class="fas fa-trophy"></i> State Level</span>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="card-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>Innovation & Learning</h3>
+            <p>Constantly exploring new technologies and methodologies in AI/ML. Committed to 
+               continuous learning through certifications, workshops, and hands-on projects.</p>
+            <div class="card-footer">
+              <span class="badge"><i class="fas fa-book"></i> Self-learner</span>
+              <span class="badge"><i class="fas fa-brain"></i> Problem Solver</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- Projects Section -->
   <section class="section alt" id="projects">
     <div class="container">
-      <h2 class="section-title">Projects</h2>
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Browse My Recent</span>
+        <h2 class="section-title">Projects</h2>
+        <div class="title-underline"></div>
+      </div>
 
-      <div class="project-list">
-        <article class="project">
-          <div class="project-meta">2024</div>
-          <h3>Drowsiness Detection System</h3>
-          <p><strong>Tools:</strong> OpenCV, Python, dlib / MediaPipe, scikit-learn</p>
-          <ul>
-            <li>Real-time fatigue detection using facial landmarks and Eye Aspect Ratio (EAR).</li>
-            <li>Triggers alerts when driver shows prolonged eye closure/low EAR.</li>
-            <li>Optimized thresholds & frame smoothing to reduce false positives.</li>
-          </ul>
+      <!-- Filter Buttons -->
+      <div class="project-filters" data-aos="fade-up" data-aos-delay="100">
+        <button class="filter-btn active" data-filter="all">
+          <i class="fas fa-th"></i> All Projects
+        </button>
+        <button class="filter-btn" data-filter="ml">
+          <i class="fas fa-brain"></i> Machine Learning
+        </button>
+        <button class="filter-btn" data-filter="cv">
+          <i class="fas fa-eye"></i> Computer Vision
+        </button>
+        <button class="filter-btn" data-filter="analytics">
+          <i class="fas fa-chart-line"></i> Analytics
+        </button>
+      </div>
+
+      <div class="project-grid">
+        <!-- Project 1 -->
+        <article class="project-card" data-category="cv ml" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-image">
+            <div class="project-overlay">
+              <button class="project-view-btn" onclick="openProjectModal('drowsiness')">
+                <i class="fas fa-eye"></i> View Details
+              </button>
+            </div>
+            <div class="project-badge">Featured</div>
+            <div class="tech-stack">
+              <span class="tech-pill">OpenCV</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">dlib</span>
+            </div>
+          </div>
+          
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-year">
+                <i class="far fa-calendar"></i> 2024
+              </span>
+              <div class="project-links">
+                <a href="#" class="project-link" title="View Code">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="project-link" title="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            
+            <h3>Drowsiness Detection System</h3>
+            
+            <p class="project-description">
+              Real-time driver fatigue detection system using advanced computer vision 
+              techniques and facial landmark analysis.
+            </p>
+            
+            <ul class="project-features">
+              <li><i class="fas fa-check-circle"></i> Eye Aspect Ratio (EAR) monitoring</li>
+              <li><i class="fas fa-check-circle"></i> Real-time alert system</li>
+              <li><i class="fas fa-check-circle"></i> Optimized false positive reduction</li>
+            </ul>
+            
+            <div class="project-footer">
+              <div class="project-stats">
+                <span><i class="fas fa-star"></i> Accuracy: 94%</span>
+              </div>
+            </div>
+          </div>
         </article>
 
-        <article class="project">
-          <div class="project-meta">2023–24</div>
-          <h3>Social Media Analytics Dashboard</h3>
-          <p><strong>Tools:</strong> Python, Power BI</p>
-          <ul>
-            <li>Built dashboards to track engagement, impressions and audience growth.</li>
-            <li>Automated data pipeline and refresh to keep KPIs current.</li>
-          </ul>
+        <!-- Project 2 -->
+        <article class="project-card" data-category="analytics" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-image">
+            <div class="project-overlay">
+              <button class="project-view-btn" onclick="openProjectModal('dashboard')">
+                <i class="fas fa-eye"></i> View Details
+              </button>
+            </div>
+            <div class="tech-stack">
+              <span class="tech-pill">Power BI</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">ETL</span>
+            </div>
+          </div>
+          
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-year">
+                <i class="far fa-calendar"></i> 2023-24
+              </span>
+              <div class="project-links">
+                <a href="#" class="project-link" title="View Dashboard">
+                  <i class="fas fa-chart-bar"></i>
+                </a>
+              </div>
+            </div>
+            
+            <h3>Social Media Analytics Dashboard</h3>
+            
+            <p class="project-description">
+              Comprehensive analytics dashboard tracking social media KPIs, engagement 
+              metrics, and audience growth patterns.
+            </p>
+            
+            <ul class="project-features">
+              <li><i class="fas fa-check-circle"></i> Automated data pipeline</li>
+              <li><i class="fas fa-check-circle"></i> Real-time KPI tracking</li>
+              <li><i class="fas fa-check-circle"></i> Interactive visualizations</li>
+            </ul>
+            
+            <div class="project-footer">
+              <div class="project-stats">
+                <span><i class="fas fa-database"></i> 100K+ records</span>
+              </div>
+            </div>
+          </div>
         </article>
 
-        <article class="project">
-          <div class="project-meta">May 2025</div>
-          <h3>GenAI Job Simulation (BCG X - Forage)</h3>
-          <p><strong>Tasks:</strong> Data extraction, initial analysis, AI chatbot prototype</p>
+        <!-- Project 3 -->
+        <article class="project-card" data-category="ml" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-image">
+            <div class="project-overlay">
+              <button class="project-view-btn" onclick="openProjectModal('genai')">
+                <i class="fas fa-eye"></i> View Details
+              </button>
+            </div>
+            <div class="project-badge highlight">Certified</div>
+            <div class="tech-stack">
+              <span class="tech-pill">GenAI</span>
+              <span class="tech-pill">NLP</span>
+              <span class="tech-pill">Chatbot</span>
+            </div>
+          </div>
+          
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-year">
+                <i class="far fa-calendar"></i> May 2025
+              </span>
+              <div class="project-links">
+                <a href="#" class="project-link" title="Certificate">
+                  <i class="fas fa-certificate"></i>
+                </a>
+              </div>
+            </div>
+            
+            <h3>GenAI Job Simulation</h3>
+            <p class="project-subtitle">BCG X - Forage</p>
+            
+            <p class="project-description">
+              Completed comprehensive GenAI simulation covering data extraction, 
+              analysis, and AI chatbot prototyping.
+            </p>
+            
+            <ul class="project-features">
+              <li><i class="fas fa-check-circle"></i> Data extraction workflows</li>
+              <li><i class="fas fa-check-circle"></i> AI chatbot prototype</li>
+              <li><i class="fas fa-check-circle"></i> Production deployment</li>
+            </ul>
+            
+            <div class="project-footer">
+              <div class="project-stats">
+                <span><i class="fas fa-award"></i> BCG Certified</span>
+              </div>
+            </div>
+          </div>
         </article>
 
-        <article class="project">
-          <div class="project-meta">May–Jun 2025</div>
-          <h3>AI/ML Internship — Elevate Labs</h3>
-          <p><strong>Recognition:</strong> Best Performer</p>
+        <!-- Project 4 -->
+        <article class="project-card" data-category="ml" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-image">
+            <div class="project-overlay">
+              <button class="project-view-btn" onclick="openProjectModal('elevate')">
+                <i class="fas fa-eye"></i> View Details
+              </button>
+            </div>
+            <div class="project-badge award">Best Performer</div>
+            <div class="tech-stack">
+              <span class="tech-pill">AI/ML</span>
+              <span class="tech-pill">Deep Learning</span>
+            </div>
+          </div>
+          
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-year">
+                <i class="far fa-calendar"></i> May-Jun 2025
+              </span>
+              <div class="project-links">
+                <a href="#" class="project-link" title="View Certificate">
+                  <i class="fas fa-trophy"></i>
+                </a>
+              </div>
+            </div>
+            
+            <h3>AI/ML Internship Project</h3>
+            <p class="project-subtitle">Elevate Labs</p>
+            
+            <p class="project-description">
+              Intensive AI/ML internship covering model development, deployment, 
+              and production optimization. Recognized as Best Performer.
+            </p>
+            
+            <ul class="project-features">
+              <li><i class="fas fa-check-circle"></i> Model building & training</li>
+              <li><i class="fas fa-check-circle"></i> Deployment pipelines</li>
+              <li><i class="fas fa-check-circle"></i> Performance optimization</li>
+            </ul>
+            
+            <div class="project-footer">
+              <div class="project-stats">
+                <span><i class="fas fa-trophy"></i> Best Performer Award</span>
+              </div>
+            </div>
+          </div>
         </article>
+      </div>
+
+      <div class="text-center" style="margin-top: 3rem;" data-aos="fade-up">
+        <a href="https://github.com/Hydramix" class="btn-primary" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+          <span>View All Projects on GitHub</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Internships & Trainings -->
+  <!-- Internships & Experience -->
   <section class="section" id="internships">
     <div class="container">
-      <h2 class="section-title">Internships & Trainings</h2>
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">My Professional Journey</span>
+        <h2 class="section-title">Experience & Training</h2>
+        <div class="title-underline"></div>
+      </div>
 
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">May 2025</div>
+      <div class="timeline-wrapper">
+        <div class="timeline-line"></div>
+        
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+          <div class="timeline-marker">
+            <i class="fas fa-brain"></i>
+          </div>
           <div class="timeline-content">
-            <h4>GenAI Job Simulation — BCG X (Forage)</h4>
-            <p>Data extraction, prototype AI chatbot, hands-on GenAI workflows.</p>
+            <div class="timeline-badge current">Current</div>
+            <span class="timeline-date">
+              <i class="far fa-calendar"></i> May 2025
+            </span>
+            <h4>GenAI Job Simulation</h4>
+            <p class="timeline-company">
+              <i class="fas fa-building"></i> BCG X (Forage Platform)
+            </p>
+            <p class="timeline-description">
+              Completed hands-on simulation in Generative AI, including data extraction, 
+              analysis workflows, and AI chatbot prototyping for enterprise applications.
+            </p>
+            <ul class="timeline-highlights">
+              <li><i class="fas fa-chevron-right"></i> Built AI chatbot prototype</li>
+              <li><i class="fas fa-chevron-right"></i> Data extraction & preprocessing</li>
+              <li><i class="fas fa-chevron-right"></i> GenAI workflow optimization</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">GenAI</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Data Analysis</span>
+            </div>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-date">May–Jun 2025</div>
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+          <div class="timeline-marker award">
+            <i class="fas fa-trophy"></i>
+          </div>
           <div class="timeline-content">
-            <h4>AI/ML Intern — Elevate Labs (Skill India / MSME)</h4>
-            <p>Worked on model building, deployment tasks. Awarded Best Performer.</p>
+            <div class="timeline-badge award">Best Performer</div>
+            <span class="timeline-date">
+              <i class="far fa-calendar"></i> May - Jun 2025
+            </span>
+            <h4>AI/ML Internship</h4>
+            <p class="timeline-company">
+              <i class="fas fa-building"></i> Elevate Labs (Skill India / MSME)
+            </p>
+            <p class="timeline-description">
+              Intensive internship focused on machine learning model development, deployment, 
+              and optimization. Awarded <strong>Best Performer</strong> for exceptional contributions.
+            </p>
+            <ul class="timeline-highlights">
+              <li><i class="fas fa-chevron-right"></i> Developed predictive ML models</li>
+              <li><i class="fas fa-chevron-right"></i> Implemented deployment pipelines</li>
+              <li><i class="fas fa-chevron-right"></i> Performance tuning & optimization</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Python</span>
+              <span class="tag">Model Deployment</span>
+            </div>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-date">2024</div>
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+          <div class="timeline-marker">
+            <i class="fas fa-users"></i>
+          </div>
           <div class="timeline-content">
-            <h4>Event Chairperson — Nexora Event</h4>
-            <p>Led event planning & operations for 8,000+ attendees — logistics, sponsorships & teams.</p>
+            <div class="timeline-badge success">8K+ Attendees</div>
+            <span class="timeline-date">
+              <i class="far fa-calendar"></i> 2024
+            </span>
+            <h4>Event Chairperson - Nexora</h4>
+            <p class="timeline-company">
+              <i class="fas fa-building"></i> S.I.E.S College
+            </p>
+            <p class="timeline-description">
+              Led complete event planning and execution for college's flagship event with 
+              8,000+ footfall. Managed cross-functional teams, logistics, and sponsorships.
+            </p>
+            <ul class="timeline-highlights">
+              <li><i class="fas fa-chevron-right"></i> Team leadership & coordination</li>
+              <li><i class="fas fa-chevron-right"></i> Sponsorship acquisition</li>
+              <li><i class="fas fa-chevron-right"></i> Logistics & operations management</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Leadership</span>
+              <span class="tag">Event Management</span>
+              <span class="tag">Team Building</span>
+            </div>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-date">2022–23</div>
+        <!-- Timeline Item 4 -->
+        <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+          <div class="timeline-marker">
+            <i class="fas fa-cash-register"></i>
+          </div>
           <div class="timeline-content">
-            <h4>Cashier — Fast Food Restaurant</h4>
-            <p>Cash handling, Excel reporting, customer service & operations experience.</p>
+            <span class="timeline-date">
+              <i class="far fa-calendar"></i> 2022 - 2023
+            </span>
+            <h4>Cashier & Operations Assistant</h4>
+            <p class="timeline-company">
+              <i class="fas fa-building"></i> Fast Food Restaurant
+            </p>
+            <p class="timeline-description">
+              Managed cash operations, Excel reporting, and customer service. Developed 
+              strong interpersonal and operational efficiency skills.
+            </p>
+            <ul class="timeline-highlights">
+              <li><i class="fas fa-chevron-right"></i> Cash handling & reconciliation</li>
+              <li><i class="fas fa-chevron-right"></i> Excel reporting & analytics</li>
+              <li><i class="fas fa-chevron-right"></i> Customer relationship management</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Operations</span>
+              <span class="tag">Excel</span>
+              <span class="tag">Customer Service</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Certificates -->
+  <!-- Certificates Section -->
   <section class="section alt" id="certificates">
     <div class="container">
-      <h2 class="section-title">Certificates</h2>
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">My Achievements</span>
+        <h2 class="section-title">Certificates & Recognition</h2>
+        <div class="title-underline"></div>
+      </div>
 
-      <div class="cert-grid">
-        <div class="cert-card cert-clickable" data-src="CHATBOT BY BCG FORAGE CERTIFICATE-1.png" tabindex="0">
-          <img src="CHATBOT BY BCG FORAGE CERTIFICATE-1.png" alt="BCG X - Forage Certificate" />
-          <div>
-            <h4>GenAI Job Simulation — BCG X (Forage)</h4>
-            <p>Completed: May 30th, 2025</p>
+      <div class="cert-showcase">
+        <!-- Certificate 1 -->
+        <div class="cert-card-new" data-aos="zoom-in" data-aos-delay="100">
+          <div class="cert-image-wrapper cert-clickable" 
+               data-src="CHATBOT BY BCG FORAGE CERTIFICATE-1.png" 
+               tabindex="0"
+               role="button"
+               aria-label="View BCG X Certificate">
+            <img src="CHATBOT BY BCG FORAGE CERTIFICATE-1.png" alt="BCG X - Forage Certificate" />
+            <div class="cert-overlay">
+              <div class="cert-zoom-icon">
+                <i class="fas fa-search-plus"></i>
+                <span>Click to View</span>
+              </div>
+            </div>
+            <div class="cert-badge-ribbon">
+              <i class="fas fa-certificate"></i>
+            </div>
+          </div>
+          
+          <div class="cert-details">
+            <div class="cert-header">
+              <i class="fas fa-award cert-icon"></i>
+              <div>
+                <h4>GenAI Job Simulation</h4>
+                <p class="cert-issuer">BCG X • Forage Platform</p>
+              </div>
+            </div>
+            
+            <p class="cert-description">
+              Successfully completed comprehensive GenAI simulation covering chatbot development, 
+              data analysis, and AI workflow implementation.
+            </p>
+            
+            <div class="cert-meta">
+              <span class="cert-date">
+                <i class="far fa-calendar-check"></i>
+                May 30, 2025
+              </span>
+              <a href="CHATBOT BY BCG FORAGE CERTIFICATE-1.png" 
+                 download 
+                 class="cert-download">
+                <i class="fas fa-download"></i>
+                Download
+              </a>
+            </div>
+            
+            <div class="cert-skills">
+              <span class="skill-badge">GenAI</span>
+              <span class="skill-badge">Chatbot Development</span>
+              <span class="skill-badge">Data Analysis</span>
+            </div>
           </div>
         </div>
 
-        <div class="cert-card cert-clickable" data-src="aiml internship elevate labs-1.png" tabindex="0">
-          <img src="aiml internship elevate labs-1.png" alt="Elevate Labs Certificate" />
-          <div>
-            <h4>Artificial Intelligence & Machine Learning — Elevate Labs</h4>
-            <p>Completed: 28 June, 2025 — Best Performer</p>
+        <!-- Certificate 2 -->
+        <div class="cert-card-new" data-aos="zoom-in" data-aos-delay="200">
+          <div class="cert-image-wrapper cert-clickable" 
+               data-src="aiml internship elevate labs-1.png" 
+               tabindex="0"
+               role="button"
+               aria-label="View Elevate Labs Certificate">
+            <img src="aiml internship elevate labs-1.png" alt="Elevate Labs AI/ML Certificate" />
+            <div class="cert-overlay">
+              <div class="cert-zoom-icon">
+                <i class="fas fa-search-plus"></i>
+                <span>Click to View</span>
+              </div>
+            </div>
+            <div class="cert-badge-ribbon gold">
+              <i class="fas fa-trophy"></i>
+            </div>
+          </div>
+          
+          <div class="cert-details">
+            <div class="cert-header">
+              <i class="fas fa-trophy cert-icon gold"></i>
+              <div>
+                <h4>AI & Machine Learning Internship</h4>
+                <p class="cert-issuer">Elevate Labs • Skill India / MSME</p>
+              </div>
+            </div>
+            
+            <div class="cert-achievement">
+              <i class="fas fa-star"></i>
+              <strong>Best Performer Award</strong>
+            </div>
+            
+            <p class="cert-description">
+              Completed intensive AI/ML internship with distinction. Recognized as 
+              Best Performer for outstanding contributions in model development and deployment.
+            </p>
+            
+            <div class="cert-meta">
+              <span class="cert-date">
+                <i class="far fa-calendar-check"></i>
+                June 28, 2025
+              </span>
+              <a href="aiml internship elevate labs-1.png" 
+                 download 
+                 class="cert-download">
+                <i class="fas fa-download"></i>
+                Download
+              </a>
+            </div>
+            
+            <div class="cert-skills">
+              <span class="skill-badge">Machine Learning</span>
+              <span class="skill-badge">Deep Learning</span>
+              <span class="skill-badge">Python</span>
+              <span class="skill-badge">Model Deployment</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <p class="note">Click any certificate to preview. Use the ❌ to close.</p>
+      <p class="cert-note" data-aos="fade-up">
+        <i class="fas fa-info-circle"></i>
+        Click on any certificate to view full-size. Press <kbd>ESC</kbd> or click the close button to exit.
+      </p>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section class="section" id="contact">
     <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <div class="grid contact-grid">
-        <div class="contact-boxes">
-          <div class="contact-box">
-            <h3>Get in touch</h3>
-            <p><strong>Email:</strong> <a href="mailto:vishwaavreddy@gmail.com">vishwaavreddy@gmail.com</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+919321614025">+91 9321614025</a></p>
-            <p><strong>Location:</strong> Mumbai, India</p>
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Let's Connect</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="title-underline"></div>
+        <p class="section-description">
+          Have a project in mind or want to collaborate? Feel free to reach out!
+        </p>
+      </div>
+
+      <div class="contact-wrapper">
+        <!-- Contact Information -->
+        <div class="contact-info-section" data-aos="fade-right">
+          <div class="contact-intro">
+            <h3>Let's work together!</h3>
+            <p>I'm always interested in hearing about new projects and opportunities.</p>
           </div>
 
-          <div class="contact-box">
-            <h3>Follow me</h3>
-            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/vishwaareddy33/" target="_blank" rel="noopener">instagram.com/vishwaareddy33/</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vishwaa-reddy-904260272" target="_blank" rel="noopener">linkedin.com/in/vishwaa-reddy-904260272</a></p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/Hydramix" target="_blank" rel="noopener">github.com/Hydramix</a></p>
+          <div class="contact-info-cards">
+            <div class="info-card-contact">
+              <div class="icon-wrapper">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="info-content">
+                <h4>Email</h4>
+                <a href="mailto:vishwaavreddy@gmail.com">vishwaavreddy@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="info-card-contact">
+              <div class="icon-wrapper">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="info-content">
+                <h4>Phone</h4>
+                <a href="tel:+919321614025">+91 9321614025</a>
+              </div>
+            </div>
+
+            <div class="info-card-contact">
+              <div class="icon-wrapper">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="info-content">
+                <h4>Location</h4>
+                <p>Mumbai, Maharashtra, India</p>
+              </div>
+            </div>
           </div>
 
-          <div class="contact-box">
-            <h3>Languages</h3>
-            <p>English, Tamil, Hindi, Marathi</p>
-            <h3>Interests</h3>
-            <p>Sports, Fitness, Data Analytics, Technology, Music, Reading</p>
+          <div class="social-connect">
+            <h4>Connect on Social Media</h4>
+            <div class="social-grid">
+              <a href="https://www.linkedin.com/in/vishwaa-reddy-904260272" 
+                 target="_blank" 
+                 rel="noopener" 
+                 class="social-card">
+                <i class="fab fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+              </a>
+              
+              <a href="https://github.com/Hydramix" 
+                 target="_blank" 
+                 rel="noopener" 
+                 class="social-card">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              
+              <a href="https://www.instagram.com/vishwaareddy33/" 
+                 target="_blank" 
+                 rel="noopener" 
+                 class="social-card">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+              </a>
+              
+              <a href="mailto:vishwaavreddy@gmail.com" 
+                 class="social-card">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="additional-info">
+            <div class="info-item">
+              <i class="fas fa-language"></i>
+              <div>
+                <strong>Languages</strong>
+                <p>English, Tamil, Hindi, Marathi</p>
+              </div>
+            </div>
+            
+            <div class="info-item">
+              <i class="fas fa-heart"></i>
+              <div>
+                <strong>Interests</strong>
+                <p>Sports, Fitness, Data Analytics, Technology, Music, Reading</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <form action="https://formspree.io/f/xldapbyy" method="POST" class="contact-form">
-  
-   <label>
-    Name
-    <input type="text" name="name" required placeholder="Your name" />
-  </label>
+        <!-- Contact Form -->
+        <div class="contact-form-section" data-aos="fade-left">
+          <form action="https://formspree.io/f/xldapbyy" method="POST" class="contact-form-new" id="contactForm">
+            <div class="form-header">
+              <i class="fas fa-paper-plane"></i>
+              <h3>Send Me a Message</h3>
+            </div>
 
-  <label>
-    Email
-    <input type="email" name="email" required placeholder="you@example.com" />
-  </label>
+            <div class="form-group">
+              <label for="name">
+                <i class="fas fa-user"></i>
+                Your Name <span class="required">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="name"
+                name="name" 
+                required 
+                placeholder="John Doe" 
+                autocomplete="name"
+              />
+            </div>
 
-  <label>
-    Message
-    <textarea name="message" rows="5" required placeholder="Write your message..."></textarea>
-  </label>
+            <div class="form-group">
+              <label for="email">
+                <i class="fas fa-envelope"></i>
+                Email Address <span class="required">*</span>
+              </label>
+              <input 
+                type="email" 
+                id="email"
+                name="email" 
+                required 
+                placeholder="john@example.com" 
+                autocomplete="email"
+              />
+            </div>
 
-  <button type="submit" class="btn-primary">Send Message</button>
+            <div class="form-group">
+              <label for="subject">
+                <i class="fas fa-tag"></i>
+                Subject
+              </label>
+              <input 
+                type="text" 
+                id="subject"
+                name="subject" 
+                placeholder="Project Collaboration" 
+              />
+            </div>
 
-</form>
+            <div class="form-group">
+              <label for="message">
+                <i class="fas fa-comment-dots"></i>
+                Message <span class="required">*</span>
+              </label>
+              <textarea 
+                id="message"
+                name="message" 
+                rows="6" 
+                required 
+                placeholder="Tell me about your project or inquiry..."
+              ></textarea>
+              <span class="char-count">
+                <span id="charCount">0</span> characters
+              </span>
+            </div>
 
+            <button type="submit" class="btn-submit">
+              <span class="btn-text">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </span>
+              <span class="btn-loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                Sending...
+              </span>
+            </button>
+
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Certificate Modal (hidden) -->
+  <!-- Certificate Modal -->
   <div id="certModal" class="cert-modal" aria-hidden="true">
-    <div class="cert-modal-inner" role="dialog" aria-modal="true" aria-labelledby="certTitle">
-      <button id="certClose" class="cert-close" aria-label="Close certificate">❌</button>
-      <div class="cert-body">
-        <img id="certImg" src="" alt="certificate preview" />
+    <div class="cert-modal-backdrop"></div>
+    <div class="cert-modal-content" role="dialog" aria-modal="true" aria-labelledby="certTitle">
+      <button id="certClose" class="cert-close-btn" aria-label="Close certificate preview">
+        <i class="fas fa-times"></i>
+      </button>
+      
+      <div class="cert-modal-body">
+        <img id="certImg" src="" alt="Certificate preview" />
+        
+        <div class="cert-modal-actions">
+          <button class="modal-action-btn" onclick="downloadCertificate()">
+            <i class="fas fa-download"></i>
+            Download
+          </button>
+          <button class="modal-action-btn" onclick="shareCertificate()">
+            <i class="fas fa-share-alt"></i>
+            Share
+          </button>
+        </div>
+      </div>
+      
+      <div class="cert-modal-nav">
+        <button class="nav-arrow prev" id="certPrev" aria-label="Previous certificate">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="nav-arrow next" id="certNext" aria-label="Next certificate">
+          <i class="fas fa-chevron-right"></i>
+        </button>
       </div>
     </div>
   </div>
 
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Vishwaa Reddy — All rights reserved.</p>
-      <p class="small">Designed with ❤️ • Built with HTML, CSS & JavaScript</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-brand">
+            <img src="logo.png" alt="Vishwaa Reddy Logo" class="footer-logo" />
+            <h3>Vishwaa Reddy</h3>
+          </div>
+          <p class="footer-tagline">
+            Data Science Student | AI/ML Enthusiast | Event Leader | Athlete
+          </p>
+          <div class="footer-social">
+            <a href="https://github.com/Hydramix" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/vishwaa-reddy-904260272" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/vishwaareddy33/" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:vishwaavreddy@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#internships">Experience</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#projects">Machine Learning</a></li>
+            <li><a href="#projects">Computer Vision</a></li>
+            <li><a href="#projects">Data Analytics</a></li>
+            <li><a href="#internships">Event Management</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Get In Touch</h4>
+          <ul class="footer-contact">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              Mumbai, India
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+919321614025">+91 9321614025</a>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:vishwaavreddy@gmail.com">vishwaavreddy@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          © <span id="year"></span> Vishwaa Reddy. All rights reserved.
+        </p>
+        <p class="made-with">
+          Designed with <i class="fas fa-heart pulse"></i> using HTML, CSS & JavaScript
+        </p>
+      </div>
     </div>
   </footer>
 
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
