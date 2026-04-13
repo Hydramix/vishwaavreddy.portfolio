@@ -751,7 +751,27 @@ function openProjectModal(projectId) {
       },
       github: '#',
       demo: '#'
-    }
+    },
+expenseTracker: {
+  title: 'Personal Expense Tracker',
+  description: 'Developed and deployed a Personal Expense Tracker application utilizing Python and HTML, focusing on structured data management and an intuitive user interface. Implemented data validation and tracking features to securely log, monitor, and visualize daily financial inputs.',
+  features: [
+    'Structured data management for daily expense records',
+    'Intuitive and user-friendly interface',
+    'Input validation to prevent incorrect entries',
+    'Secure logging and tracking of financial inputs',
+    'Monitoring and summary insights (daily/weekly/monthly)',
+    'Basic visualization for spending overview'
+  ],
+  tech: ['Python', 'HTML', 'CSS', 'JavaScript'],
+  stats: {
+    duration: 'Feb 2026 – Apr 2026',
+    org: 'IIT Bombay Spoken Tutorial',
+    focus: 'Data Validation & Tracking'
+  },
+  github: 'https://github.com/Hydramix/Personal-expense-tracker-',
+  demo: '#'
+}
   };
 
   const project = projectData[projectId];
